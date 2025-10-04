@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="thats-not-my-date"
+run/main_scene="uid://c5jxyh2x7o3mq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"

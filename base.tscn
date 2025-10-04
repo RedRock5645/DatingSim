@@ -1,3 +1,64 @@
-[gd_scene format=3 uid="uid://c5jxyh2x7o3mq"]
+[gd_scene load_steps=3 format=3 uid="uid://c5jxyh2x7o3mq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ejs"]
+bg_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.20152655, 0.20152661, 0.20152643, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpg24"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -5.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0.69803923, 1, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PhonePanel" type="PanelContainer" parent="CanvasLayer2"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_right = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g5ejs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer2"]
+
+[node name="ProfilePanel" type="PanelContainer" parent="CanvasLayer2/CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -312.0
+offset_right = 152.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rpg24")

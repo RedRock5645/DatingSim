@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5jxyh2x7o3mq"]
+[gd_scene load_steps=6 format=3 uid="uid://c5jxyh2x7o3mq"]
+
+[ext_resource type="Script" uid="uid://cgepu5lg7076a" path="res://Profile.gd" id="1_rpg24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ejs"]
 bg_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
@@ -16,6 +18,15 @@ corner_radius_bottom_left = 50
 bg_color = Color(0.6, 0.6, 0.6, 0)
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_g5ejs"]
+font_size = 28
+font_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+outline_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rpg24"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -62,3 +73,31 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rpg24")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer2/CanvasLayer/ProfilePanel"]
+layout_mode = 2
+bbcode_enabled = true
+script = ExtResource("1_rpg24")
+
+[node name="NameLabel" type="Label" parent="CanvasLayer2/CanvasLayer/ProfilePanel"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "NAME: Goose"
+label_settings = SubResource("LabelSettings_g5ejs")
+
+[node name="AboutMeLabel" type="Label" parent="CanvasLayer2/CanvasLayer/ProfilePanel"]
+visible = false
+custom_minimum_size = Vector2(0.2, 100)
+layout_mode = 2
+text = "About Me: Honk"
+label_settings = SubResource("LabelSettings_rpg24")
+
+[node name="ZodiacLabel" type="Label" parent="CanvasLayer2/CanvasLayer/ProfilePanel"]
+visible = false
+layout_mode = 2
+
+[node name="InterestsLebel" type="Label" parent="CanvasLayer2/CanvasLayer/ProfilePanel"]
+visible = false
+layout_mode = 2
